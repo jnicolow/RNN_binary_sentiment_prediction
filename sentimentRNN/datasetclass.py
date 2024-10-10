@@ -24,7 +24,7 @@ class TextSentimentDataset(Dataset):
             text = f.readlines()[0]
         text = textpreprocess.clean_text(text)
 
-        # Tokenize text and convert to indices
+        # tokenize text and convert to indices
         tokens = self.tokenizer(text)
         token_indices = [self.vocab[token] for token in tokens]
 
